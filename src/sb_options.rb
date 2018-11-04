@@ -1,3 +1,5 @@
+require_relative 'parsers/defaultparser'
+
 class SoulBreakSelector
 	SOULBREAKS = {
 		'default' => '/game/951/wiki/Soul%20Break%20List_Default%20Soul%20Break',
@@ -25,5 +27,9 @@ class SoulBreakSelector
 
 	def get_selected
 		return @selected
+	end
+	
+	def get_parser
+		return DefaultParser.new
 	end
 end
