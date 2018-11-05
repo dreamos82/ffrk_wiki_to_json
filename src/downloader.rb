@@ -6,37 +6,6 @@ require 'optparse'
 require_relative 'sb_options'
 
 $WIKI_PREFIX= 'https://ffrkstrategy.gamematome.jp'
-def get_details(url)
-	uri = URI.parse($WIKI_PREFIX + url)
-	httpreq =Net::HTTP.new(uri.host, uri.port)
-	httpreq.use_ssl = true
-	output = httpreq.get(uri.request_uri)
-	document= Nokogiri::HTML(output.body)
-	sbtable = document.at('#content_block_7')
-	detailelement = Hash.new
-	sbtable.search('tr').each do |tr|
-		cells = tr.search('th, td')
-		detailelement[cells[0].text.strip] = cells[1].text.strip
-	end
-	return detailelement
-end
-
-def parse_table(sbtable)
-	sbitems = []
-	sbtable.search('tr').each do |tr|
-		cells = tr.search('th, td')
-		elements = cells[1].child
-	
-		if(!elements.attribute('href').nil?)
-			cur_item = get_details(elements.attribute('href'))
-			cur_item["name"] = cells[1].text.strip
-			cur_item["hero"] = cells[2].text.strip
-			cur_item["realm"] = cells[3].text.strip
-			sbitems.push(cur_item)
-		end
-	end
-	return sbitems
-end
 
 def save_file(filename, json_output) 
 	f = File.new(filename, 'w')
