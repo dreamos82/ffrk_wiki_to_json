@@ -76,7 +76,8 @@ document = Nokogiri::HTML(output.body)
 
 sbtable = document.at('#content_block_5')
 
-sbitems = parse_table(sbtable)
+#sbitems = parse_table(sbtable)
 parser = sbselector.get_parser
+sbitems = parser.parse(sbtable)
 json_output = JSON.pretty_generate(sbitems)
 save_file(filename, json_output)

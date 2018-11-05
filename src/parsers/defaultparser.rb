@@ -1,6 +1,6 @@
 require_relative 'parser'
 
-class DefaultParser
+class DefaultParser < Parser
 
 	def parse(sbtable)
 		sbitems = []
