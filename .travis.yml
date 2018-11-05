@@ -4,4 +4,4 @@ rvm:
  - jruby
 
 before_script: cd src
-script: bundle rake
+script: bundle exec rake
