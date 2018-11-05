@@ -24,7 +24,7 @@ Where options can be:
 * `-t` or `--type sbtype` it downloads the soulbreak of type sbtype (it can be: default, ultra, shared, arcane, overstrike, burst, super, unique)
 * `-o` or `--output filename` it save the json into file with name filename
 
-If no parameters provided it downloads the default soulbreak information on the file default.json
+If no parameters provided it downloads the default soulbreak information on the file default.json. If no output file name is provided, it will use the default name in the format of: sbtype.json where sbtype is the selected soul break type.
 
 Prerequisites
 ===============
