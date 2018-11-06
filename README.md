@@ -1,6 +1,7 @@
 # FFRK WIKI TO JSON
+[![Build Status](https://travis-ci.com/inuyasha82/ffrk_wiki_to_json.svg?branch=master)](https://travis-ci.com/inuyasha82/ffrk_wiki_to_json)
 
-I will add more freature in the future.
+I will add more features in the future.
 
 
 This application currently generate only a json of the ffrk default soul breaks, including the following information:
