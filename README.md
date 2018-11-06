@@ -3,8 +3,7 @@
 
 I will add more features in the future.
 
-
-This application currently generate only a json of the ffrk default soul breaks, including the following information:
+This application currently generate only a json of the ffrk default soul breaks from ffrkstrategy.gamematome.jp wiki, including the following information:
 
 * name
 * user
