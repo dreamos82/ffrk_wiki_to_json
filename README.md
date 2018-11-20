@@ -1,6 +1,7 @@
 # FFRK WIKI TO JSON
+[![Build Status](https://travis-ci.com/inuyasha82/ffrk_wiki_to_json.svg?branch=master)](https://travis-ci.com/inuyasha82/ffrk_wiki_to_json)
 
-I will add more freature in the future.
+I will add more features in the future.
 
 
 This application  generate a json of the ffrk soul breaks, including the following information:
@@ -26,7 +27,7 @@ Where options can be:
 * `-o` or `--output filename` it save the json into file with name filename
 * `-h` or `--help` to read the help
 
-If no parameters provided it downloads the default soulbreak information on the file default.json
+If no parameters provided it downloads the default soulbreak information on the file default.json. If no output file name is provided, it will use the default name in the format of: sbtype.json where sbtype is the selected soul break type.
 
 Prerequisites
 ===============

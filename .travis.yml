@@ -1,0 +1,7 @@
+language: ruby
+rvm:
+ - 2.2
+ - jruby
+
+before_script: cd src
+gemfile: src/Gemfile
