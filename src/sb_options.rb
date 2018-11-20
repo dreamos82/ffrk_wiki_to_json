@@ -1,5 +1,6 @@
 require_relative 'parsers/defaultparser'
 require_relative 'parsers/burstparser'
+require_relative 'parsers/sharedparser'
 
 class SoulBreakSelector
 	SOULBREAKS = {
@@ -29,10 +30,12 @@ class SoulBreakSelector
 	def get_selected
 		return @selected
 	end
-	
+
 	def get_parser
 		if(@selected == 'burst')
 			return BurstParser.new
+		elsif (@selected == 'shared')
+			return SharedParser.new
 		else
 			return DefaultParser.new
 		end
