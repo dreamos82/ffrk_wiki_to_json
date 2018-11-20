@@ -16,4 +16,11 @@ class TestSoulBreakSelector < Test::Unit::TestCase
     sbselector = SoulBreakSelector.new('asd')
     assert_equal(sbselector.get_selected, 'default')
   end
+
+  test "get parser should return the shared parser if shared is selected" do
+    sbselector = SoulBreakSelector.new('shared')
+    parser = sbselector.get_parser
+    puts parser.class
+    assert_equal(parser.class, SharedParser)
+  end
 end
